@@ -13,7 +13,9 @@ int main() {
         cout << InvalidInputException().Message();
         return 0;
     }
+    std::cout << "Please enter a number of vertices:"<< endl;
     std::cin >> numVertices;
+    std::cout << "Please enter the number of edges:" << endl;
     std::cin >> numEdges;
     try {
         if (directed == 'y') {
@@ -23,6 +25,7 @@ int main() {
             graph = new UndirectedGraph(numVertices, numEdges);
         }
         int u, v;
+        std::cout << "Please list the edges of the graph" << endl;
         for (int i = 0; i < numEdges; i++) {
             std::cin >> u >> v;
             graph->addEdge(u, v);
